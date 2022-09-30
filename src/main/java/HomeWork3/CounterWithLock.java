@@ -13,6 +13,7 @@ public class CounterWithLock {
         if(isAcquired){
             try {
                 value++;
+                System.out.println(Thread.currentThread().getName()+" = "+value);
             } finally {
                 lock.unlock();
             }
